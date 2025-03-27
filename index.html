@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="static/img/acade.png" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap-icons-1.11.3/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="static/css/styles/whatsapp.css">
+
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <title>ACADEC-SR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header,
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        #header-title {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            display: inline;
+            /* O inline-block */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Whatsapp container -->
+    <div id="whatsapp-container"></div>
+
+    <!-- Contenedor para el Header -->
+    <div id="header-container"></div>
+
+    <main>
+        <!-- Iframe donde se cambiará el contenido -->
+        <div>
+            <iframe id="iframe" src="pages/principal.html" title="Iframe Seleccionado" style="width: 100%; min-height: 100vh; height: 100vh; border: none;"></iframe>
+        </div>
+    </main>
+
+    <!-- Contenedor para el Footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Función para cargar contenido desde un archivo HTML en un contenedor
+        function loadHTMLContent(url, elementId) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error al cargar el contenido:', error);
+                });
+        }
+
+        // Cargar el header y el footer
+        loadHTMLContent('frames/header.html', 'header-container');
+        loadHTMLContent('frames/whatsapp.html', 'whatsapp-container');
+        loadHTMLContent('frames/footer.html', 'footer-container');
+
+        // Función que cambia el src del iframe dependiendo de la opción seleccionada
+        function changeIframe(url) {
+            // Obtener el iframe
+            var iframe = document.getElementById("iframe");
+
+            // Cambiar el atributo src del iframe con la URL seleccionada
+            iframe.src = url;
+        }
+
+    </script>
+
+</body>
+
+</html>

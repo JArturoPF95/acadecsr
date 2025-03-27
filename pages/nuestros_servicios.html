@@ -1,0 +1,93 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="static/img/acade.png" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="../static/css/bootstrap-icons-1.11.3/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../static/css/styles/whatsapp.css">
+
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <title>Próximos eventos</title>
+
+    <style>
+        .carousel-item {
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Esto asegura que el carrusel ocupe toda la altura de la ventana del navegador */
+        }
+    </style>
+</head>
+
+<body class="align-items-center" style="width: 95%;">
+
+    <section class="text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-bold" style="color: #D87F25;">Nuestros Servicios</h1>
+                <p class="lead text-body-secondary" style="color: #193A65;">Contamos con una variedad de cursos
+                    enfocados principalmente en los siguientes ejes</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="myCarousel" class="carousel slide mb-2" data-bs-ride="carousel" style="margin-left: 5%; height: 85hv;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('../static/img/liderazgo.jpg');">
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Liderazgo</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('../static/img/organizacion.jpg');">
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Organización</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('../static/img/tecnologia.jpg');">
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Ofimática y Tecnología</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('../static/img/personalizados.jpg');">
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Cursos hechos a la medida</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <section class="text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <p class="lead text-body-secondary" style="color: #193A65;"><b>También realizamos levantamiento de información para alinear estructuras orgánicas, elaboración de perfiles de puesto y consultoría en procesos.</b></p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

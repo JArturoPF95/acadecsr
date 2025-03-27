@@ -1,0 +1,43 @@
+<header class="p-2 border-bottom bg-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
+        <img src="static/img/acade.png" width="40" height="40" alt="">
+      </a>
+
+      <!-- Título -->
+      <ul class="nav flex-grow-1 justify-content-center">
+        <li>
+          <a href="#" class="nav-link px-2 d-flex align-items-center">
+            <h5 class="m-0" style="color: #193A65;">ACADEC</h5>
+            <h5 class="m-0" style="color: #D87F25;"> SR</h5>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Íconos de navegación -->
+      <div class="d-flex align-items-center">
+        <a href="index.html" class="d-block link-body-emphasis text-decoration-none mx-lg-4 mx-2">
+          <i class="bi bi-house-fill fs-3"></i>
+        </a>
+
+        <!-- Menú desplegable -->
+        <div class="dropdown text-end">
+          <a href="#" id="iframeSelector" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-list fs-3"></i>
+          </a>
+          <ul class="dropdown-menu text-small" style="background-color: #193A65;">
+            <li><a class="dropdown-item" style="color: #D87F25;" href="#" onclick="changeIframe('pages/quienes_somos.html')">Quiénes Somos</a></li>
+            <li><a class="dropdown-item" style="color: #D87F25;" href="#" onclick="changeIframe('pages/nuestros_servicios.html')">Nuestros Servicios</a></li>
+            <li><a class="dropdown-item" style="color: #D87F25;" href="#" onclick="changeIframe('pages/proximos_eventos.html')">Próximos Eventos</a></li>
+            <li><a class="dropdown-item" style="color: #D87F25;" href="#" onclick="changeIframe('pages/contactanos.html')">Contáctanos</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
