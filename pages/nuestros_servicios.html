@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="static/img/acade.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/img/acade.png" type="image/x-icon">
     <link rel="stylesheet" href="../static/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="../static/css/bootstrap-icons-1.11.3/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
@@ -15,13 +15,12 @@
         .carousel-item {
             background-size: cover;
             background-position: center;
-            height: 100vh; /* Esto asegura que el carrusel ocupe toda la altura de la ventana del navegador */
+            height: 45vh;
         }
     </style>
 </head>
 
 <body class="align-items-center" style="width: 95%;">
-
     <section class="text-center container">
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
@@ -32,7 +31,7 @@
         </div>
     </section>
 
-    <div id="myCarousel" class="carousel slide mb-2" data-bs-ride="carousel" style="margin-left: 5%; height: 85hv;">
+    <div id="myCarousel" class="carousel slide mb-2" data-bs-ride="carousel" style="margin-left: 5%; height: 45vh;">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
                 aria-label="Slide 1"></button>
@@ -45,6 +44,11 @@
                 <div class="container">
                     <div class="carousel-caption text-start">
                         <h1>Liderazgo</h1>
+                        <h4>Te ayudan a desarrollar habilidades como comunicación, empatía, delegación de funciones,
+                            gestión de proyectos, etc.</h4>
+                            <button type="button" class="btn btn-primary btn-md" data-bs-toggle="modal" 
+                            data-bs-target="#dynamicModal" data-bs-file="../pages/modals/liderazgo.html">Ver más</button>
+                        
                     </div>
                 </div>
             </div>
@@ -52,6 +56,9 @@
                 <div class="container">
                     <div class="carousel-caption text-start">
                         <h1>Organización</h1>
+                        <h4>Aprende a mejorar la comunicación, la productividad y la organización.</h4>
+                        <button type="button" class="btn btn-primary btn-md" data-bs-toggle="modal"
+                            data-bs-target="#dynamicModal" data-bs-file="http://localhost:8080/acadecsr/acadecsr/pages/modals/organizacion.html">Ver más</button>
                     </div>
                 </div>
             </div>
@@ -59,13 +66,19 @@
                 <div class="container">
                     <div class="carousel-caption text-start">
                         <h1>Ofimática y Tecnología</h1>
+                        <h4>Aprende y desarrolla habilidades que permitan el uso de herramientas tecnológicas.</h4>
+                        <button type="button" class="btn btn-primary btn-md" data-bs-toggle="modal"
+                            data-bs-target="#dynamicModal" data-bs-file="http://localhost:8080/acadecsr/acadecsr/pages/modals/tecnologia.html">Ver más</button>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item" style="background-image: url('../static/img/personalizados.jpg');">
+            <div class="carousel-item" style="background-image: url('../static/img/tecnologia.jpg');">
                 <div class="container">
                     <div class="carousel-caption text-start">
-                        <h1>Cursos hechos a la medida</h1>
+                        <h1>Cursos Personalizados</h1>
+                        <h4>Con base en las necesidades específicas de tu empresa, diseñamos programas de capacitación
+                            personalizados que se adaptan a tus objetivos estratégicos.</h4>
+                        <!--button type="button" class="btn btn-primary btn-md" data-bs-toggle="modal" data-bs-target="#dynamicModal" data-bs-file="modals/cursos_personalizados.html">Ver más</button-->
                     </div>
                 </div>
             </div>
@@ -80,14 +93,61 @@
         </button>
     </div>
 
-    <section class="text-center container">
-        <div class="row py-lg-5">
-            <div class="col-lg-6 col-md-8 mx-auto">
-                <p class="lead text-body-secondary" style="color: #193A65;"><b>También realizamos levantamiento de información para alinear estructuras orgánicas, elaboración de perfiles de puesto y consultoría en procesos.</b></p>
+<!-- Modal dinámico -->
+<div class="modal fade" id="dynamicModal" tabindex="-1" aria-labelledby="dynamicModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="dynamicModalLabel">Cargando...</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Cargando contenido...</p>
             </div>
         </div>
-    </section>
+    </div>
+</div>
 
+
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const dynamicModal = document.getElementById('dynamicModal');
+    if (!dynamicModal) {
+        console.error('Modal dinámico no encontrado en el DOM.');
+        return;
+    }
+
+    dynamicModal.addEventListener('show.bs.modal', async function (event) {
+        const button = event.relatedTarget;
+        if (!button) return;
+
+        const file = button.getAttribute('data-bs-file');
+        if (!file) {
+            console.error('No se encontró el atributo data-bs-file.');
+            return;
+        }
+
+        const modalBody = dynamicModal.querySelector('.modal-body');
+        modalBody.innerHTML = '<p>Cargando contenido...</p>';
+
+        try {
+            const response = await fetch(file);
+            if (!response.ok) {
+                throw new Error(`Error al cargar el archivo: ${response.status} ${response.statusText}`);
+            }
+            const data = await response.text();
+            modalBody.innerHTML = data;
+        } catch (error) {
+            console.error('Error al cargar el archivo modal:', error);
+            modalBody.innerHTML = `<p>Error: ${error.message}</p>`;
+        }
+    });
+});
+
+
+    </script>
 </body>
 
 </html>

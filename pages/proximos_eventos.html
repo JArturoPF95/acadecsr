@@ -10,14 +10,88 @@
 
     <script src="../static/js/bootstrap.bundle.min.js"></script>
     <title>Próximos eventos</title>
+
+    <style>
+        .list-group-item {
+            list-style-type: none;
+            /* Elimina los puntos */
+        }
+    </style>
 </head>
 
 <body class="align-items-center" style="width: 95%;">
 
     <main class="px-3">
         <h1 class="fw-bold" style="color: #D87F25;">Próximos Eventos</h1>
-        <img src="../static/img/proximos.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
-                    width="700" height="500" loading="lazy">
+        <div class="album py-5 bg-body-white">
+            <div class="container">
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col"></div>
+                    <!--CURSO DE ACCIONES BÁSICAS DE EXCEL-->
+                    <div class="col">
+                        <div class="card text-center">
+                            <img src="../static/img/excel.jpeg" class="card-img-top" alt="...">
+                            <div class="card-header text-success">
+                                CURSO DE ACCIONES BÁSICAS DE EXCEL
+                            </div>
+                            <div class="card-body">
+                                <p class="d-inline-flex gap-1">
+                                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExampleInfo" aria-expanded="false"
+                                        aria-controls="collapseExampleInfo" style="background-color: #193A65; border: none;">
+                                        Sobre el curso
+                                    </button>
+                                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExampleMat" aria-expanded="false"
+                                        aria-controls="collapseExampleMat" style="background-color: #193A65; border: none;">
+                                        Material y Constancias
+                                    </button>
+                                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExampleContact" aria-expanded="false"
+                                        aria-controls="collapseExampleContact" style="background-color: #193A65; border: none;">
+                                        Aparta tu lugar
+                                    </button>
+                                </p>
+                                <div class="collapse" id="collapseExampleInfo">
+                                    <div class="card card-body" style="border: none;">
+                                        <h6 style="color: #D87F25;"><i class="bi bi-cash"></i> Inversión con 40% de descuento: $600 mx </h6> <br> 
+                                        <!--h5 class="card-title">Special title treatment</h5-->
+                                        <p class="card-text" style="color: #D87F25;">Aprende Excel desde Cero y Domina lo Básico <br> Empieza hoy y
+                                            mejora tus habilidades</p>
+                                        <p class="card-text" style="color: #D87F25;">Manipula celdas, filas y columnas; diseña tablas, aplica fórmulas y
+                                            funciones, y mucho más.</p>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="collapseExampleMat">
+                                    <div class="card card-body" style="border: none;">
+                                        <p class="dropdown-item" style="color: #D87F25;"><i class="bi bi-check-circle"></i> &nbsp;
+                                            Constancia de participación </p>
+                                        <p class="dropdown-item" style="color: #D87F25;"><i class="bi bi-check-circle"></i> &nbsp;
+                                            Manual del curso </p>
+                                        <p class="dropdown-item" style="color: #D87F25;"><i class="bi bi-check-circle"></i> &nbsp;
+                                            Grabaciones de las sesiones </p>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="collapseExampleContact">
+                                    <div class="card card-body" style="border: none;">
+                                        <p class="dropdown-item" style="color: #D87F25;"><i class="bi bi-whatsapp"></i> &nbsp;
+                                            55-3069-2451 </p>
+                                        <p class="dropdown-item" style="color: #D87F25;"><i class="bi bi-facebook"></i> &nbsp; ACADEC-SR
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-body-secondary">
+                                <i class="bi bi-camera-video-fill"></i> &nbsp; Sábados 05 y 12 de abril <br> 10:00 a
+                                13:00 hrs.
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
     </main>
 
 </body>
