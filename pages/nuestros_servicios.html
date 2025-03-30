@@ -15,7 +15,7 @@
         .carousel-item {
             background-size: cover;
             background-position: center;
-            height: 45vh;
+            height: 65vh;
         }
     </style>
 </head>
@@ -31,7 +31,7 @@
         </div>
     </section>
 
-    <div id="myCarousel" class="carousel slide mb-2" data-bs-ride="carousel" style="margin-left: 5%; height: 45vh;">
+    <div id="myCarousel" class="carousel slide mb-2" data-bs-ride="carousel" style="margin-left: 5%; height: 65vh;">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
                 aria-label="Slide 1"></button>
@@ -46,9 +46,21 @@
                         <h1>Liderazgo</h1>
                         <h4>Te ayudan a desarrollar habilidades como comunicación, empatía, delegación de funciones,
                             gestión de proyectos, etc.</h4>
-                            <button type="button" class="btn btn-primary btn-md" data-bs-toggle="modal" 
-                            data-bs-target="#dynamicModal" data-bs-file="../pages/modals/liderazgo.html">Ver más</button>
-                        
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseExampleLid" aria-expanded="false"
+                            aria-controls="collapseExampleLid" style="background-color: #193A65; border: none;">
+                            Ver más
+                        </button>
+                        <div class="collapse" id="collapseExampleLid">
+                            <div class="card card-body" style="background-color: transparent; border: none;">
+                                <h5><i class="bi bi-caret-right-fill"></i> &nbsp; Liderazgo y Emociones </h5>
+                                <h5><i class="bi bi-caret-right-fill"></i> &nbsp; Liderazgo situacional </h5>
+                                <h5><i class="bi bi-caret-right-fill"></i> &nbsp; Retroalimentación en mi trabajo en equipo </h5>
+                                <h5><i class="bi bi-caret-right-fill"></i> &nbsp; Habilidades gerenciales </h5>
+                                <h5><i class="bi bi-caret-right-fill"></i> &nbsp; Trabajo en equipo y motivación </h5>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -57,8 +69,19 @@
                     <div class="carousel-caption text-start">
                         <h1>Organización</h1>
                         <h4>Aprende a mejorar la comunicación, la productividad y la organización.</h4>
-                        <button type="button" class="btn btn-primary btn-md" data-bs-toggle="modal"
-                            data-bs-target="#dynamicModal" data-bs-file="http://localhost:8080/acadecsr/acadecsr/pages/modals/organizacion.html">Ver más</button>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseExampleOrg" aria-expanded="false"
+                            aria-controls="collapseExampleOrg" style="background-color: #193A65; border: none;">
+                            Ver más
+                        </button>
+                        <div class="collapse" id="collapseExampleOrg">
+                            <div class="card card-body" style="background-color: transparent; border: none;">
+                                <h5><i class="bi bi-caret-right-fill"></i> &nbsp; Comunicación asertiva </h5>
+                                <h5><i class="bi bi-caret-right-fill"></i> &nbsp; Administración efectiva del tiempo </h5>
+                                <h5><i class="bi bi-caret-right-fill"></i> &nbsp; Equipos de alto rendimiento </h5>
+                                <h5><i class="bi bi-caret-right-fill"></i> &nbsp; Gestión de proyectos </h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,12 +90,25 @@
                     <div class="carousel-caption text-start">
                         <h1>Ofimática y Tecnología</h1>
                         <h4>Aprende y desarrolla habilidades que permitan el uso de herramientas tecnológicas.</h4>
-                        <button type="button" class="btn btn-primary btn-md" data-bs-toggle="modal"
-                            data-bs-target="#dynamicModal" data-bs-file="http://localhost:8080/acadecsr/acadecsr/pages/modals/tecnologia.html">Ver más</button>
+
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseExampleTec" aria-expanded="false"
+                            aria-controls="collapseExampleTec" style="background-color: #193A65; border: none;">
+                            Ver más
+                        </button>
+                        <div class="collapse" id="collapseExampleTec">
+                            <div class="card card-body" style="background-color: transparent; border: none;">
+                                <h5><i class="bi bi-caret-right-fill"></i> &nbsp; Word </h5>
+                                <h5><i class="bi bi-caret-right-fill"></i> &nbsp; Power Point </h5>
+                                <h5><i class="bi bi-caret-right-fill"></i> &nbsp; Excel </h5>
+                                <h5><i class="bi bi-caret-right-fill"></i> &nbsp; Power BI </h5>
+                                <h5><i class="bi bi-caret-right-fill"></i> &nbsp; Chat GPT </h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item" style="background-image: url('../static/img/tecnologia.jpg');">
+            <div class="carousel-item" style="background-image: url('../static/img/personalizados.jpg');">
                 <div class="container">
                     <div class="carousel-caption text-start">
                         <h1>Cursos Personalizados</h1>
@@ -93,61 +129,6 @@
         </button>
     </div>
 
-<!-- Modal dinámico -->
-<div class="modal fade" id="dynamicModal" tabindex="-1" aria-labelledby="dynamicModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="dynamicModalLabel">Cargando...</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Cargando contenido...</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const dynamicModal = document.getElementById('dynamicModal');
-    if (!dynamicModal) {
-        console.error('Modal dinámico no encontrado en el DOM.');
-        return;
-    }
-
-    dynamicModal.addEventListener('show.bs.modal', async function (event) {
-        const button = event.relatedTarget;
-        if (!button) return;
-
-        const file = button.getAttribute('data-bs-file');
-        if (!file) {
-            console.error('No se encontró el atributo data-bs-file.');
-            return;
-        }
-
-        const modalBody = dynamicModal.querySelector('.modal-body');
-        modalBody.innerHTML = '<p>Cargando contenido...</p>';
-
-        try {
-            const response = await fetch(file);
-            if (!response.ok) {
-                throw new Error(`Error al cargar el archivo: ${response.status} ${response.statusText}`);
-            }
-            const data = await response.text();
-            modalBody.innerHTML = data;
-        } catch (error) {
-            console.error('Error al cargar el archivo modal:', error);
-            modalBody.innerHTML = `<p>Error: ${error.message}</p>`;
-        }
-    });
-});
-
-
-    </script>
 </body>
 
 </html>
