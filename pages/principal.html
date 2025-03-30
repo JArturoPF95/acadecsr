@@ -52,33 +52,32 @@
     </div-->
 
     <div class="container col-xl-12 col-xxl-8 px-2 py-2">
-        <!-- Primera parte dividida en dos columnas -->
-        <div class="row align-items-center g-lg-5 py-3">
-            <!-- Columna izquierda con imagen al 50% -->
-            <div class="col-md-6 text-center">
-                <picture>
-                    <img class="img-fluid img-thumbnail" role="img" aria-label="Placeholder"
-                        preserveAspectRatio="xMidYMid slice" focusable="false" src="../static/img/class.jpg"
-                        alt="Imagen de capacitación" style="width: 50%;">
-                </picture>
+        <div class="container-fluid px-0">
+            <!-- Primera fila: dos cuadros al 50% del ancho -->
+            <div class="row g-0" style="height: 40vh;">
+                <!-- Columna izquierda con imagen -->
+                <div class="col-md-6 text-center">
+                    <picture>
+                        <img class="img-fluid h-100 w-100" role="img" aria-label="Placeholder"
+                            src="../static/img/class.jpg" alt="Imagen de capacitación" style="object-fit: cover; border: none;">
+                    </picture>
+                </div>
+                <!-- Columna derecha con texto y fondo azul -->
+                <div class="col-md-6 d-flex align-items-center justify-content-start" style="background-image: url('../static/img/principal_blue.jpg'); color: white;">
+                    <h3 class="display-6 text-white text-center p-3">
+                        La capacitación es el camino hacia el éxito.
+                    </h3>
+                </div>
             </div>
-            <!-- Columna derecha con texto y fondo azul -->
-            <div class="col-md-6 text-center text-lg-start" style="background-color: #193A65; color: white; padding: 20px;">
-                <h3 class="display-6">
-                    La capacitación es el camino hacia el éxito.
-                </h3>
-            </div>
-        </div>
-    
-        <!-- Texto centrado con fondo blanco y diseño de "ACADEC SR" -->
-        <div class="row align-items-center g-lg-5 py-3">
-            <div class="col text-center" style="background-color: white; padding: 10px;">
-                <h1 style="font-size: 2.5rem; font-weight: bold;">
-                    <span style="color: #D87F25;">A</span>
-                    <span style="color: #193A65;">CADEC</span>
-                    <span style="color: #D87F25;">S</span>
-                    <span style="color: #193A65;">R</span>
-                </h1>
+        
+            <!-- Segunda fila: cuadro inferior alineado con el mismo ancho -->
+            <div class="row g-0" style="height: 30vh;">
+                <div class="col d-flex align-items-center justify-content-center" style="background-image: url('../static/img/principal_white.jpg')">
+                    <h1 style="font-size: 2.5rem; font-weight: bold; line-height: 30hv;">
+                        <span style="color: #D87F25;">ACADEC</span>
+                        <span style="color: #193A65;"> SR</span>
+                    </h1>
+                </div>
             </div>
         </div>
     
